@@ -1,0 +1,242 @@
+/* 
+   Innovation Copilot Engineering Workspace Theme
+   Clean, modern, student-friendly engineering workspace UI.
+   Supports AI Engineering Mentor Panel, Quick Action Chips, Photo Upload, & Analytics.
+*/
+
+:root {
+    --bg-workspace: #f8fafc;
+    --card-bg: #ffffff;
+    --nav-bg: #0f172a;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --brand-primary: #2563eb;
+    --brand-primary-dark: #1d4ed8;
+    --success-green: #10b981;
+    --warning-orange: #f59e0b;
+    --danger-red: #ef4444;
+}
+
+body.bg-workspace {
+    background-color: var(--bg-workspace);
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+.eng-navbar {
+    background-color: var(--nav-bg);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 0;
+}
+
+.brand-logo {
+    width: 34px;
+    height: 34px;
+    background-color: var(--brand-primary);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.eng-nav-btn {
+    color: #94a3b8 !important;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem !important;
+    border-radius: 6px;
+    transition: all 0.15s ease;
+}
+
+.eng-nav-btn:hover, .eng-nav-btn.active {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-demo-quick {
+    background-color: #f59e0b;
+    color: #0f172a;
+    border: none;
+    transition: all 0.15s ease;
+}
+
+.btn-demo-quick:hover {
+    background-color: #d97706;
+    color: #ffffff;
+}
+
+/* CARDS & PANELS */
+.card {
+    border: 1px solid var(--border-color);
+}
+
+.mcu-select-card {
+    border: 2px solid var(--border-color);
+    transition: all 0.15s ease;
+}
+
+.btn-check:checked + .mcu-select-card {
+    border-color: var(--brand-primary);
+    background-color: #eff6ff;
+}
+
+/* DYNAMIC COMPONENT INPUT ROWS */
+.custom-comp-row {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.4rem 0.6rem;
+}
+
+.custom-comp-row input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.95rem;
+    width: 100%;
+}
+
+/* WORKSPACE SIDEBAR & TIMELINE */
+.step-checklist-item {
+    border-left: 3px solid transparent;
+    padding: 0.75rem 1rem;
+    transition: all 0.15s ease;
+    cursor: pointer;
+}
+
+.step-checklist-item.active {
+    border-left-color: var(--brand-primary);
+    background-color: #eff6ff;
+}
+
+.step-checklist-item.completed {
+    border-left-color: var(--success-green);
+}
+
+.step-badge {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* MENTOR Q&A PANEL */
+.mentor-panel {
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+.mentor-chip {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #1e293b;
+    font-size: 0.825rem;
+    font-weight: 600;
+    padding: 0.35rem 0.7rem;
+    border-radius: 20px;
+    transition: all 0.15s ease;
+    cursor: pointer;
+}
+
+.mentor-chip:hover {
+    background-color: #eff6ff;
+    border-color: #93c5fd;
+    color: #1d4ed8;
+}
+
+.qa-card {
+    background-color: #ffffff;
+    border-left: 4px solid var(--brand-primary);
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 0.85rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.qa-card-user {
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+}
+
+.qa-card-response {
+    white-space: pre-line;
+    color: #334155;
+    font-size: 0.925rem;
+    line-height: 1.5;
+}
+
+/* TROUBLESHOOTING ENGINE UI */
+.troubleshoot-header {
+    background-color: #1e293b;
+    color: white;
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px 8px 0 0;
+}
+
+.diagnostic-question-box {
+    background-color: #ffffff;
+    border: 2px solid #fed7aa;
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+.diag-option-btn {
+    text-align: left;
+    padding: 0.85rem 1.1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.15s ease;
+}
+
+.diag-option-yes {
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #166534;
+}
+
+.diag-option-yes:hover {
+    background-color: #dcfce7;
+    border-color: #86efac;
+}
+
+.diag-option-no {
+    background-color: #fff1f2;
+    border: 1px solid #fecdd3;
+    color: #9f1239;
+}
+
+.diag-option-no:hover {
+    background-color: #ffe4e6;
+    border-color: #fda4af;
+}
+
+/* ANALYTICS STAT CARDS */
+.stat-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+.stat-num {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--brand-primary);
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
